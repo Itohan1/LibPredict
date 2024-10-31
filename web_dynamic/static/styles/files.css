@@ -1,0 +1,413 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+/* Major Heading Style */
+h3 {
+    color: #6a1b9a;
+}
+
+/* File Grid */
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    width: 80%;
+}
+
+/* Individual File Box */
+.file-box {
+    background-color: #d1c4e9;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    color: #4a148c;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+}
+
+.file-box:hover {
+    background-color: #b39ddb;
+    transform: translateY(-2px);
+}
+
+/* File name text */
+.file-box span {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Button styles */
+.file-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+}
+
+.file-button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Additional margin to space buttons apart */
+.file-box button {
+    margin: 0 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Save Button Styles */
+#save-button,
+#delete-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#save-button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+#delete-button {
+    background-color: #f44336;
+}
+
+#delete-button:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+/* Add File Container */
+#add-file-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* New File Container Styles */
+#new-file-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 80%;
+}
+
+/* New File Content Text Area */
+#new-file-content {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    border: 1px solid #4a148c;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f3e5f5;
+    color: #4a148c;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s;
+}
+
+#new-file-content:focus {
+    border-color: #6a1b9a;
+}
+
+/* Create File Button Styles */
+#create-file-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+    width: 100%;
+    max-width: 200px;
+}
+
+#create-file-button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* File Input */
+#file-input {
+    padding: 10px;
+    border: 1px solid #4a148c;
+    border-radius: 5px;
+    background-color: #f3e5f5;
+    color: #4a148c;
+    font-size: 1em;
+    width: 300px;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+#file-input:focus {
+    border-color: #6a1b9a;
+}
+
+/* Add File Button */
+#add-file-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+}
+
+#add-file-button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Edit Container Styles */
+#edit-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 80%;
+    background-color: #e1bee7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Edit Text Area */
+#edit-text-area {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    border: 1px solid #4a148c;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s;
+}
+
+#edit-text-area:focus {
+    border-color: #6a1b9a;
+}
+
+/* Button Container inside Edit Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Save and Delete Button Styles */
+#save-button,
+#delete-button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Save Button Style */
+#save-button {
+    background-color: #4caf50; /* Green */
+}
+
+#save-button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Delete Button Style */
+#delete-button {
+    background-color: #f44336; /* Red */
+}
+
+#delete-button:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+/* Hamburger Icon */
+.chat-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 2em;
+    color: #4a148c;
+    z-index: 10;
+}
+
+/* Chatbox Styling */
+#chatbox {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 70px;
+    width: 300px;
+    height: calc(100vh - 90px);
+    background-color: #f4f4f4;
+    border: 2px solid #4a148c;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+}
+
+#chatbox h4 {
+    margin: 0;
+    color: #6a1b9a;
+    text-align: center;
+}
+
+#chat-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+    background-color: #e1bee7;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#chat-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4a148c;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#send-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #4a148c;
+    cursor: pointer;
+}
+#send-button:hover {
+    color: #6a1b9a;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 600px) {
+    .file-grid {
+        grid-template-columns: 1fr;
+    }
+    #new-file-content {
+        width: 100%;
+    }
+
+    /* File Input */
+    #file-input {
+        width: 100%;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #f3e5f5;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #6a1b9a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+/* Close Button */
+.close-button {
+    color: #6a1b9a;
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #4caf50;
+}
+
+/* Modal Text */
+.modal-content p {
+    color: #4a148c;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Confirmation Buttons */
+#confirm-delete, #cancel-delete {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#confirm-delete:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+#cancel-delete {
+    background-color: #f44336;
+}
+
+#cancel-delete:hover {
+    background-color: #c62828;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/styles/files.css">
+    <script src="./static/script/files.js" defer></script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <title>Files</title>
+</head>
+<body>
+    <h3>Files in Folder: <span id="folder-name"></span></h3>
+    <div id="file-list" class="file-grid"></div>
+
+    <!-- Add file button and input -->
+    <div id="add-file-container">
+        <input type="file" id="file-input" />
+        <button id="add-file-button">Add File</button>
+    </div>
+
+    <!-- Create new file container -->
+    <div id="new-file-container">
+        <input type="text" id="new-file-name" placeholder="Enter new file name..." />
+        <textarea id="new-file-content" placeholder="Type your file content here..."></textarea>
+        <button id="create-file-button">Create File</button>
+    </div>
+
+    <div id="edit-container">
+        <textarea id="edit-text-area" placeholder="Edit file content here..."></textarea>
+        <div class="button-container">
+	    <button id="save-button">Save</button>
+	    <button id="delete-button" class="delete">Delete</button>
+       </div>
+    </div>
+    <div class="chat-toggle">
+	<span id="hamburger-icon"><strong>AI Chat<strong>☰</span>
+    </div>
+    <div id="chatbox">
+        <h4>AI Chat</h4>
+        <div id="chat-content"></div>
+        <div id="chat-input-container">
+	    <input type="text" id="chat-input" placeholder="Type your message...">
+	    <button id="send-button">📤</button>
+        </div>
+    </div>
+    <div id="alert-container" style="display: none; position: absolute; top: 20px; right: 20px; background-color: #4caf50; color: white; padding: 15px; border-radius: 5px; z-index: 1000;">
+        <span id="alert-message"></span>
+    </div>
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal">&times;</span>
+            <p>Are you sure you want to delete "<span id="file-to-delete"></span>"?</p>
+            <button id="confirm-delete">Yes</button>
+            <button id="cancel-delete">No</button>
+       </div>
+    </div>
+</body>
+</html>

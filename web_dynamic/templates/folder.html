@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles/folders.css">
+    <script src="./static/script/folders.js" defer></script>
+    <title>Folders</title>
+</head>
+<body>
+    <div class="folder-list" id="folder-list">
+        <h3>Available Folders</h3>
+        <div id="folders-container"></div>
+    </div>
+
+    <!-- Confirmation Modal for Folder Deletion (initially hidden) -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to delete this folder?</p>
+            <button id="confirmDelete">Yes</button>
+            <button id="cancelDelete">No</button>
+        </div>
+    </div>
+    <div id="alert-container" style="display: none; position: absolute; top: 20px; right: 20px; background-color: #4caf50; color: white; padding: 15px; border-radius: 5px; z-index: 1000;">
+        <span id="alert-message"></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles/main.css">
+    <script src="./static/script/main.js" defer></script>
+    <script src="./static/script/post.js" defer></script>
+    <script src="./static/script/settings.js" defer></script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <title>Mainapp</title>
+</head>
+<body>
+    <div class="roundprofile-icon">
+        <strong>Name:</strong> <span id="user-name"></span>
+    </div>
+    <a href="folders" class="folder-name" id="example-library">Check Library</a>
+
+    <!-- Hamburger icon for menu -->
+    <div class="hamburger-icon" id="hamburger-icon">
+        &#9776; <!-- Three-dash icon -->
+    </div>
+
+    <!-- Dropdown menu -->
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="profile-pic-container">
+            <input type="file" id="profile-pic-input" accept="image/*" style="display: none;" />
+            <div class="profile-pic" id="profile-pic"></div>
+            <div class="upload-message">Upload profile picture</div>
+        </div>
+        <h2>
+            <a href="#" id="account-settings-link">Account Settings</a>
+            <a href="#" id="logout-link">Logout</a>
+        </h2>
+    </div>
+
+    <!-- Account Settings Form (Initially Hidden) -->
+    <div id="account-settings-form" style="display: none;">
+        <h3>Update Account Settings</h3>
+        <form>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" placeholder="First Name">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" placeholder="Surname">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Age">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Password">
+            <button type="button" id="save-settings">Save Changes</button>
+        </form>
+    </div>
+
+    <!-- Logout Confirmation Modal (Initially Hidden) -->
+    <div id="logout-modal" style="display: none;">
+        <h3>Are you sure you want to logout?</h3>
+        <button id="confirm-logout">Yes</button>
+        <button id="cancel-logout">No</button>
+    </div>
+
+    <div class="folder-container" id="folder-container">
+        <h2 class="folder-title">Libraries</h2>
+        <div class="folder">
+            <div class="file-grid" id="file-grid">
+                <!-- Example files will be populated here -->
+            </div>
+        </div>
+    </div>
+    <div class="folder-create">
+        <h3>Create Libraries</h3>
+        <input type="text" id="folder-name" placeholder="Enter folder name">
+        <button id="create-folder-button">Create Folder</button>
+    </div>
+    <div class="post-box" id="post-box">
+        <h3>Upload a Post</h3>
+        <textarea id="post-content" placeholder="Enter your post here..."></textarea>
+        <button id="submit-post-button">Submit Post</button>
+    </div>
+    <div id="message"></div>
+    <div id="files-modal" style="display:none;">
+        <h3 id="modal-title"></h3>
+        <input type="text" id="file-name" placeholder="Enter file name">
+        <textarea id="file-content" placeholder="Enter file content"></textarea>
+        <button id="add-file-button">Add File</button>
+        <div id="file-list"></div>
+        <button id="close-modal-button">Close</button>
+    </div>
+    <div id="alert-container" style="display: none; position: absolute; top: 20px; right: 20px; background-color: #4caf50; color: white; padding: 15px; border-radius: 5px; z-index: 1000;">
+        <span id="alert-message"></span>
+    </div>
+    <div class="message-container" id="message-container">
+        <h3>Important Notifications</h3>
+        <p id="message-display">No new messages</p>
+    </div>
+</body>
+</html>
